@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <h1>
+      
+      SOURCE CODE:
+      </h1>
+    <div class="container" id = "op">
+    <p1 id = "o">
+      
+      //Anish Coder <br>
+
+#include &ltstdio.h&gt <br>
+int fun1(int array[],int n)<br>
+{<br>
+    int sum=0;<br>
+    <br>
+    for(int i=0;i&ltn;i++)<br>
+   {<br>
+    sum = sum + array[i];<br>
+    <br>
+   }<br>
+    
+    return sum;<br>
+}<br>
+float fun2(int array[],int n)<br>
+{<br>
+   int a = fun1(array,n);<br>
+   float avg = (float)a/(float)n;<br>
+    return avg;<br>
+    
+}<br>
+
+
+
+
+float fun3(int array[],int n,int max)<br>
+{<br>
+   int a = fun1(array,n);<br>
+   int b = max*n;<br>
+   float avgMarks = (float)a/(float)b*100;<br>
+    return avgMarks;<br>
+    
+}<br>
+
+
+
+
+
+int main(int argc, char *argv[])<br>
+{<br>
+	int n;<br>
+	int max;<br>
+	printf("ENTER TOTAL NO OF STUDENTS:\n");<br>
+	scanf("%d",&n);<br>
+	int array[n];<br>
+	printf("ENTER MAXIMUM MARKS:\n");<br>
+	scanf("%d",&max);<br>
+	for(int i=0;i&ltn;i++)<br>
+	{<br>
+	 
+	 printf("ENTER MARKS OF STUDENT %d:\n",i+1);<br>
+	 scanf("%d",&array[i]);<br>
+	 
+	}<br>
+	int c= fun1(array,n);<br>
+	printf("THE SUM OF MARKS OF ALL THE STUDENTS IS %d\n",c)<br>
+	float d=fun2(array,n);<br>
+		printf("THE AVERAGE OF MARKS OF ALL THE STUDENTS IS %.2f\n",d);<br>
+		float e = fun3(array,n,max);<br>
+		printf("AVERAGE PERCENTAGE OF ALL THE STDENTS IS %.2f%\n",e);<br>
+}
+      </p1>
+      </div>
+    <main>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>
